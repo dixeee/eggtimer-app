@@ -6,7 +6,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <!-- home screen -->
+    <div id="homepageCtn">
+      <h1 id="homeTitle">Let's Cook Eggs!</h1>
+      <button id="beginBtn">begin</button>
+    </div>
+
+    <!-- menu screen -->
+    <div id="menupageCtn">
+      <h1 id="menuTitle">What you cookin'?</h1>
+      <div id="menuOptionsCtn">
+        <button id="sunnysideBtn">sunny side</button>
+        <button id="hardboiledBtn">hard boiled</button>
+        <button id="softboiledBtn">soft boiled</button>
+        <button id="scrambledBtn">scrambled</button>
+      </div>
+    </div>
+
+    <!-- start screen -->
+    <div id="startpageCtn">
+      <h1 id="startTitle">Ready?</h1>
+      <button id="startBtn">start</button>
+    </div>
+
+    <!-- timer screen -->
+    <div id="timerpageCtn">
+      <h1 id="timerTitle">Cooking...</h1>
+      <h2 id="timer">0:00</h2>
+    </div>
+
+    <!-- end screen -->
+    <div id="endpageCtn">
+      <h1 id="endTitle">Eggs Done!</h1>
+      <button id="endBtn">end</button>
+    </div>
+
+    <script src="renderer.js"></script>
   </body>
 </html>
