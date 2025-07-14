@@ -3,13 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <title>eggtimer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="colors/colors.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- heading top bar -->
+    <div id="headingCtn">
+      <h1 id="headingTitle">EGG TIMER</h1>
+      <div id="headBtnsCtn">
+        <button id="shrinkBtn" class="headingBtn">
+          <img src="images/eggtimer_shrink.PNG">
+        </button>
+        <button id="closeBtn" class="headingBtn">
+          <img src="images/eggtimer_close.PNG">
+        </button>
+      </div>
+    </div>
+
     <!-- home screen -->
     <div id="homepageCtn">
-      <h1 id="homeTitle">Let's Cook Eggs!</h1>
-      <button id="beginBtn">begin</button>
+      <pre id="homeTitle">
+Let's Cook
+     Eggs!</pre>
+      <button id="beginBtn" class="homeBtn">
+        <img src="images/eggtimer_button.PNG">
+      </button>
     </div>
 
     <!-- menu screen -->
