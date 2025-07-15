@@ -40,14 +40,18 @@ body {
   color: var(--gold);
 }
 
-.homeBtn {
+.button {
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.homeBtn img {
-  width: 200px;
+.button img {
+  width: 150px;
+}
+
+#beginBtn {
+  margin-top: 3%;
 }
 
 #headingCtn {
@@ -121,4 +125,50 @@ body {
 #sunnysideH2, #hardboiledH2, #softboiledH2, #scrambledH2 {
   font-family: Pixelade;
   font-size: 1.5em;
+}
+
+#eggImg {
+  width: 135px;
+  margin-top: 1.5%;
+}
+
+#startTitle {
+  font-family: BabyDoll;
+  font-size: 3em;
+  margin-top: 8%;
+  color: var(--gold);
+  text-shadow:
+    -2.5px -2.5px 0 var(--dark-red),
+     2.5px -2.5px 0 var(--dark-red),
+    -2.5px  2.5px 0 var(--dark-red),
+     2.5px  2.5px 0 var(--dark-red);
+}
+
+#timerTitle {
+  font-family: BabyDoll;
+  font-size: 3em;
+  margin-top: 8%;
+  color: var(--gold);
+  text-shadow:
+    -2.5px -2.5px 0 var(--dark-red),
+     2.5px -2.5px 0 var(--dark-red),
+    -2.5px  2.5px 0 var(--dark-red),
+     2.5px  2.5px 0 var(--dark-red);
+}
+
+#chickAnimation {
+  width: 135px;
+  margin-top: 1.5%;
+}
+
+#timer {
+  font-family: Pixelade;
+  font-size: 8.5em;
+  margin-top: -2%;
+  color: var(--black);
+  text-shadow:
+    -1px -1px 0 var(--black),
+     1px -1px 0 var(--black),
+    -1px  1px 0 var(--black),
+     1px  1px 0 var(--black);
 }
