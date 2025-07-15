@@ -9,56 +9,94 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- heading top bar -->
-    <div id="headingCtn">
-      <h1 id="headingTitle">EGG TIMER</h1>
-      <div id="headBtnsCtn">
-        <button id="shrinkBtn" class="headingBtn">
-          <img src="images/eggtimer_shrink.PNG">
-        </button>
-        <button id="closeBtn" class="headingBtn">
-          <img src="images/eggtimer_close.PNG">
-        </button>
+    <!-- Top Container - Navigation Bar -->
+    <div class="container-fluid nav-wrapper">
+      <div class="row navBar align-items-center">
+        <div class="col d-flex">
+          <h1 id="navH1">EGG TIMER</h1>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="navBtn">
+            <img src="images/eggtimer_shrink.PNG" alt="minimize">
+          </button>
+          <button class="navBtn">
+            <img src="images/eggtimer_close.PNG" alt="close">
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- home screen -->
-    <div id="homepageCtn">
-      <pre id="homeTitle">
-Let's Cook
-     Eggs!</pre>
-      <button id="beginBtn" class="homeBtn">
-        <img src="images/eggtimer_button.PNG">
-      </button>
-    </div>
-
-    <!-- menu screen -->
-    <div id="menupageCtn">
-      <h1 id="menuTitle">What you cookin'?</h1>
-      <div id="menuOptionsCtn">
-        <button id="sunnysideBtn">sunny side</button>
-        <button id="hardboiledBtn">hard boiled</button>
-        <button id="softboiledBtn">soft boiled</button>
-        <button id="scrambledBtn">scrambled</button>
+    <!-- Main Interface Container -->
+    <div class="container-fluid">
+      <div id="homepageCtn" class="row">
+        <div class="col-12 text-center">
+          <h1 id="homeTitle">Let's Cook Eggs!</h1>
+        </div>
+        <div class="col-12 text-center">
+          <button id="beginBtn" class="homeBtn">
+            <img src="images/eggtimer_button.PNG" alt="begin">
+          </button>
+        </div>
       </div>
-    </div>
 
-    <!-- start screen -->
-    <div id="startpageCtn">
-      <h1 id="startTitle">Ready?</h1>
-      <button id="startBtn">start</button>
-    </div>
+      <div id="menupageCtn" class="row">
+        <div class="col-12 text-center">
+          <h1 id="menuTitle" class="mb-0">What you cookin'?</h1>
+        </div>
+        <div id="menuOptionsCtn">
+          <div class="col-12 d-flex justify-content-center gap-x-6">
+            <button id="sunnysideBtn">
+              <img src="images/eggtimer_fried.PNG" alt="sunny side">
+            </button>
+            <button id="hardboiledBtn">
+              <img src="images/eggtimer_hardboiled.PNG" alt="hard boiled">
+            </button>
+          </div>
+          <div class="col-12 d-flex justify-content-center gap-x-9">
+            <h2 id="sunnysideH2" class="mb-0">sunny side</h2>
+            <h2 id="hardboiledH2" class="mb-0">hard boiled</h2>
+          </div>
+          <div class="col-12 d-flex justify-content-center gap-x-6">
+            <button id="softboiledBtn">
+              <img src="images/eggtimer_softboiled.PNG" alt="soft boiled">
+            </button>
+            <button id="scrambledBtn">
+              <img src="images/eggtimer_scrambled.PNG" alt="scrambled">
+            </button>
+          </div>
+          <div class="col-12 d-flex justify-content-center gap-x-9">
+            <h2 id="softboiledH2">soft boiled</h2>
+            <h2 id="scrambledH2">scrambled</h2>
+          </div>
+        </div>
+      </div>
 
-    <!-- timer screen -->
-    <div id="timerpageCtn">
-      <h1 id="timerTitle">Cooking...</h1>
-      <h2 id="timer">0:00</h2>
-    </div>
+      <div id="startpageCtn" class="row">
+        <div class="col-12 text-center">
+          <h1 id="startTitle">Ready?</h1>
+        </div>
+        <div class="col-12 text-center">
+          <button id="startBtn">start</button>
+        </div>
+      </div>
 
-    <!-- end screen -->
-    <div id="endpageCtn">
-      <h1 id="endTitle">Eggs Done!</h1>
-      <button id="endBtn">end</button>
+      <div id="timerpageCtn" class="row">
+        <div class="col-12 text-center">
+          <h1 id="timerTitle">Cooking...</h1>
+        </div>
+        <div class="col-12 text-center">
+          <h2 id="timer">0:00</h2>
+        </div>
+      </div>
+
+      <div id="endpageCtn" class="row">
+        <div class="col-12 text-center">
+          <h1 id="endTitle">Eggs Done!</h1>
+        </div>
+        <div class="col-12 text-center">
+          <button id="endBtn">end</button>
+        </div>
+      </div>
     </div>
 
     <script src="renderer.js"></script>

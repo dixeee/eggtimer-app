@@ -8,12 +8,6 @@
   src: url(fonts/Pixelade.ttf);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-image: url(images/eggtimer_bg.PNG);
   background-size: 100% 100%;
@@ -22,29 +16,38 @@ body {
   background-attachment: fixed;
 }
 
-.headingBtn {
+.navBtn {
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.headingBtn img {
-  width: 40px;
-  height: auto;
-  margin-top: -5px;
+.navBtn img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 1em;
+}
+
+.nav-wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4.25%;
+}
+
+#navH1 {
+  font-family: BabyDoll;
+  font-size: 2em;
+  color: var(--gold);
 }
 
 .homeBtn {
   border: none;
   background: none;
   cursor: pointer;
-  margin-left: 240px;
-  margin-top: 40px;
 }
 
 .homeBtn img {
   width: 200px;
-  height: auto;
 }
 
 #headingCtn {
@@ -55,22 +58,11 @@ body {
   font-size: 1.35em;
 }
 
-#shrinkBtn {
-  margin-right: 10px;
-}
-
-#headingTitle {
-  color: var(--gold);
-  margin-right: 240px;
-}
-
 #homeTitle {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 110px;
+  margin-top: 10%;
   font-family: BabyDoll;
-  font-size: 5em;
+  font-size: 4.5em;
   color: var(--gold);
   text-shadow:
     -2.5px -2.5px 0 var(--dark-red),
@@ -79,18 +71,54 @@ body {
      2.5px  2.5px 0 var(--dark-red);
 }
 
-#menupageCtn {
+#menupageCtn, #startpageCtn, #timerpageCtn, #endpageCtn {
   display: none;
 }
 
-#startpageCtn {
-  display: none;
+#menuTitle {
+  font-family: BabyDoll;
+  font-size: 3em;
+  margin-top: 5%;
+  color: var(--gold);
+  text-shadow:
+    -2.5px -2.5px 0 var(--dark-red),
+     2.5px -2.5px 0 var(--dark-red),
+    -2.5px  2.5px 0 var(--dark-red),
+     2.5px  2.5px 0 var(--dark-red);
 }
 
-#timerpageCtn {
-  display: none;
+#sunnysideBtn, #hardboiledBtn,
+#softboiledBtn, #scrambledBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-#endpageCtn {
-  display: none;
+#sunnysideBtn img {
+  width: 120px;
+}
+
+#hardboiledBtn img {
+  width: 115px;
+}
+
+#softboiledBtn img {
+  width: 105px;
+}
+
+#scrambledBtn img {
+  width: 125px;
+}
+
+.gap-x-6 {
+  column-gap: 6rem;
+}
+
+.gap-x-9 {
+  column-gap: 9rem;
+}
+
+#sunnysideH2, #hardboiledH2, #softboiledH2, #scrambledH2 {
+  font-family: Pixelade;
+  font-size: 1.5em;
 }
