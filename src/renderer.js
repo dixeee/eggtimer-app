@@ -1,9 +1,38 @@
+// Navigation Bar
+const backBtn = document.getElementById('backBtn');
+const ctnIds = ['homepageCtn', 'menupageCtn', 'startpageCtn']
+
+backBtn.addEventListener('click', () => {
+    ctnIds.forEach(id => {
+        if (document.getElementById(id).style.display == 'block') {
+            let currPage = id;
+
+            if (currPage != 'homepageCtn') {
+                let prevPageIndex = ctnIds.indexOf(id) - 1;
+                let prevPage = ctnIds[prevPageIndex];
+
+                setPage(currPage, prevPage);
+
+                if (prevPage == 'homepageCtn') {
+                    backBtn.style.display = 'none';
+                };
+            };
+        };
+    });
+});
+
+function setPage(currCtn, otherCtn) {
+    document.getElementById(currCtn).style.display = 'none';
+    document.getElementById(otherCtn).style.display = 'block';
+};
+
 // Home Page
 const beginBtn = document.getElementById('beginBtn');
 
 beginBtn.addEventListener('click', () => {
     document.getElementById('homepageCtn').style.display = 'none';
     document.getElementById('menupageCtn').style.display = 'block';
+    backBtn.style.display = 'block';
 });
 
 // Menu Page
@@ -25,6 +54,7 @@ const startBtn = document.getElementById('startBtn');
 startBtn.addEventListener('click', () => {
     document.getElementById('startpageCtn').style.display = 'none';
     document.getElementById('timerpageCtn').style.display = 'block';
+    backBtn.style.display = 'none';
     startTimer();
 });
 

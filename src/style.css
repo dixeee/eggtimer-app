@@ -16,13 +16,14 @@ body {
   background-attachment: fixed;
 }
 
-.navBtn {
+#backBtn {
+  display: none;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.navBtn img {
+#backBtn img {
   width: 30px;
   height: 30px;
   margin-bottom: 1em;
