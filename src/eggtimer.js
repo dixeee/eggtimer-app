@@ -101,10 +101,8 @@ let dotCount = 0;
 
 function setTimer(eggId) {
     if (eggId == 'sunnysideBtn') {
-        // timeInSeconds = 150;
-        timeInSeconds = 5;
-        // timer.textContent = '2:30';
-        timer.textContent = '0:05';
+        timeInSeconds = 150;
+        timer.textContent = '2:30';
     };
 
     if (eggId == 'hardboiledBtn') {
