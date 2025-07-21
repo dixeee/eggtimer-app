@@ -1,3 +1,19 @@
+// Sound Effects
+const btnSound = new Audio("sounds/btn_bubblepop.mp3");
+
+const hoverSound = new Audio("sounds/hover_bubble.mp3");
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+});
+
+const timerSound = new Audio("sounds/timer_ticking.mp3");
+const endTimerSound = new Audio("sounds/end_alarmdigital.mp3");
+timerSound.loop = true;
+endTimerSound.loop = true;
+
 // Navigation Bar
 const backBtn = document.getElementById('backBtn');
 const ctnIds = ['homepageCtn', 'menupageCtn', 'startpageCtn']
@@ -8,6 +24,9 @@ backBtn.addEventListener('click', () => {
             let currPage = id;
 
             if (currPage != 'homepageCtn') {
+                btnSound.currentTime = 0;
+                btnSound.play();
+
                 let prevPageIndex = ctnIds.indexOf(id) - 1;
                 let prevPage = ctnIds[prevPageIndex];
 
@@ -30,6 +49,9 @@ function setPage(currCtn, otherCtn) {
 const beginBtn = document.getElementById('beginBtn');
 
 beginBtn.addEventListener('click', () => {
+    btnSound.currentTime = 0;
+    btnSound.play();
+
     document.getElementById('homepageCtn').style.display = 'none';
     document.getElementById('menupageCtn').style.display = 'block';
     backBtn.style.display = 'block';
@@ -37,12 +59,20 @@ beginBtn.addEventListener('click', () => {
 
 // Menu Page
 const menuBtnIds = ['sunnysideBtn', 'hardboiledBtn', 'softboiledBtn', 'scrambledBtn']
+const endEggImg = document.getElementById('eggImgEnd');
+
+let endEgg = '';
 
 menuBtnIds.forEach(id => {
     const menuBtn = document.getElementById(id);
     menuBtn.addEventListener('click', () => {
+        btnSound.currentTime = 0;
+        btnSound.play();
+
         document.getElementById('menupageCtn').style.display = 'none';
         document.getElementById('startpageCtn').style.display = 'block';
+
+        endEgg = id.substring(0, id.length - 3);
 
         setTimer(id);
     });
@@ -52,6 +82,9 @@ menuBtnIds.forEach(id => {
 const startBtn = document.getElementById('startBtn');
 
 startBtn.addEventListener('click', () => {
+    btnSound.currentTime = 0;
+    btnSound.play();
+
     document.getElementById('startpageCtn').style.display = 'none';
     document.getElementById('timerpageCtn').style.display = 'block';
     backBtn.style.display = 'none';
@@ -90,13 +123,15 @@ function setTimer(eggId) {
     };
 };
 
-const frames = ["images/eggtimer_egg2.png", "images/eggtimer_egg3.png", "images/eggtimer_egg4.png", "images/eggtimer_egg5.png"]
+const frames = ['images/eggtimer_egg2.png', 'images/eggtimer_egg3.png', 'images/eggtimer_egg4.png', 'images/eggtimer_egg5.png']
 const chickImg = document.getElementById('chickAnimation');
 
 let currentFrame = 0;
 
 function startTimer() {
     if (!intervalId) {
+        timerSound.play();
+
         intervalId = setInterval(() => {
             const minutes = Math.floor(timeInSeconds / 60);
             const seconds = timeInSeconds % 60;
@@ -110,7 +145,13 @@ function startTimer() {
             if (timeInSeconds < 0) {
                 clearInterval(intervalId);
                 intervalId = null;
+
+                timerSound.pause();
+                timerSound.currentTime = 0;
+                endTimerSound.play();
                 timer.textContent = '0:00';
+
+                endEggImg.src = `images/eggtimer_${endEgg}.png`;
                 
                 document.getElementById('timerpageCtn').style.display = 'none';
                 document.getElementById('endpageCtn').style.display = 'block';
@@ -123,6 +164,11 @@ function startTimer() {
 const endBtn = document.getElementById('endBtn');
 
 endBtn.addEventListener('click', () => {
+    endTimerSound.pause();
+    endTimerSound.currentTime = 0;
+    btnSound.currentTime = 0;
+    btnSound.play();
+
     document.getElementById('endpageCtn').style.display = 'none';
     document.getElementById('homepageCtn').style.display = 'block';
 });
