@@ -12,6 +12,7 @@ const createWindow = () => {
     width: 512,
     height: 512,
     resizable: false,
+    icon: path.join(__dirname, 'images', 'eggtimer_icon'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       devTools: false,
