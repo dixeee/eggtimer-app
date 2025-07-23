@@ -1,16 +1,16 @@
 // Sound Effects
-const btnSound = new Audio("sounds/btn_bubblepop.mp3");
+const btnSound = new Audio('sounds/btn_bubblepop.mp3');
 
-const hoverSound = new Audio("sounds/hover_bubble.mp3");
-document.querySelectorAll("button").forEach(button => {
-    button.addEventListener("mouseenter", () => {
+const hoverSound = new Audio('sounds/hover_bubble.mp3');
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
         hoverSound.currentTime = 0;
         hoverSound.play();
     });
 });
 
-const timerSound = new Audio("sounds/timer_ticking.mp3");
-const endTimerSound = new Audio("sounds/end_alarmdigital.mp3");
+const timerSound = new Audio('sounds/timer_ticking.mp3');
+const endTimerSound = new Audio('sounds/end_alarmdigital.mp3');
 timerSound.loop = true;
 endTimerSound.loop = true;
 
@@ -100,10 +100,8 @@ let intervalId;
 
 function setTimer(eggId) {
     if (eggId == 'sunnysideBtn') {
-        timeInSeconds = 5;
-        timer.textContent = '0:05';
-        // timeInSeconds = 150;
-        // timer.textContent = '2:30';
+        timeInSeconds = 150;
+        timer.textContent = '2:30';
     };
 
     if (eggId == 'hardboiledBtn') {
@@ -112,10 +110,8 @@ function setTimer(eggId) {
     };
 
     if (eggId == 'softboiledBtn') {
-        // timeInSeconds = 360;
-        // timer.textContent = '6:00';
-        timeInSeconds = 6;
-        timer.textContent = '0:06';
+        timeInSeconds = 360;
+        timer.textContent = '6:00';
     };
 
     if (eggId == 'scrambledBtn') {
