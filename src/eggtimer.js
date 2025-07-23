@@ -58,21 +58,21 @@ beginBtn.addEventListener('click', () => {
 });
 
 // Menu Page
-const menuBtnIds = ['sunnysideBtn', 'hardboiledBtn', 'softboiledBtn', 'scrambledBtn']
-const endEggImg = document.getElementById('eggImgEnd');
+const menuBtnIds = ['sunnysideBtn', 'hardboiledBtn', 'softboiledBtn', 'scrambledBtn'];
+const eggTypes = ['sunnyside', 'hardboiled', 'softboiled', 'scrambled'];
 
-let endEgg = '';
+let eggIndex = 0;
 
 menuBtnIds.forEach(id => {
     const menuBtn = document.getElementById(id);
     menuBtn.addEventListener('click', () => {
+        eggIndex = menuBtnIds.indexOf(id);
+
         btnSound.currentTime = 0;
         btnSound.play();
 
         document.getElementById('menupageCtn').style.display = 'none';
         document.getElementById('startpageCtn').style.display = 'block';
-
-        endEgg = id.substring(0, id.length - 3);
 
         setTimer(id);
     });
@@ -97,12 +97,13 @@ const timerTitle = document.getElementById('timerTitle');
 
 let timeInSeconds = 0;
 let intervalId;
-let dotCount = 0;
 
 function setTimer(eggId) {
     if (eggId == 'sunnysideBtn') {
-        timeInSeconds = 150;
-        timer.textContent = '2:30';
+        timeInSeconds = 5;
+        timer.textContent = '0:05';
+        // timeInSeconds = 150;
+        // timer.textContent = '2:30';
     };
 
     if (eggId == 'hardboiledBtn') {
@@ -111,8 +112,10 @@ function setTimer(eggId) {
     };
 
     if (eggId == 'softboiledBtn') {
-        timeInSeconds = 360;
-        timer.textContent = '6:00';
+        // timeInSeconds = 360;
+        // timer.textContent = '6:00';
+        timeInSeconds = 6;
+        timer.textContent = '0:06';
     };
 
     if (eggId == 'scrambledBtn') {
@@ -120,11 +123,6 @@ function setTimer(eggId) {
         timer.textContent = '3:45';
     };
 };
-
-const frames = ['images/eggtimer_egg2.png', 'images/eggtimer_egg3.png', 'images/eggtimer_egg4.png', 'images/eggtimer_egg5.png']
-const chickImg = document.getElementById('chickAnimation');
-
-let currentFrame = 0;
 
 function startTimer() {
     if (!intervalId) {
@@ -137,8 +135,6 @@ function startTimer() {
             timer.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
             timeInSeconds--;
-            currentFrame = (currentFrame + 1) % frames.length;
-            chickImg.src = frames[currentFrame];
 
             if (timeInSeconds < 0) {
                 clearInterval(intervalId);
@@ -148,11 +144,16 @@ function startTimer() {
                 timerSound.currentTime = 0;
                 endTimerSound.play();
                 timer.textContent = '0:00';
-
-                endEggImg.src = `images/eggtimer_${endEgg}.png`;
                 
                 document.getElementById('timerpageCtn').style.display = 'none';
                 document.getElementById('endpageCtn').style.display = 'block';
+
+                eggTypes.forEach(type => {
+                    const typeId = document.getElementById(type);
+                    if (typeId) typeId.style.display = 'none';
+                });
+
+                document.getElementById(eggTypes[eggIndex]).style.display = 'block';
             };
         }, 1000);
     };

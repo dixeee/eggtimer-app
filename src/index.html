@@ -43,10 +43,10 @@
         <div id="menuOptionsCtn">
           <div class="col-12 d-flex justify-content-center gap-x-6">
             <button id="sunnysideBtn" class="menuButton">
-              <img src="images/eggtimer_sunnyside.PNG" alt="sunny side">
+              <img src="images/eggtimer_sunnyside.PNG" data-egg="sunnyside" alt="sunny side">
             </button>
             <button id="hardboiledBtn" class="menuButton">
-              <img src="images/eggtimer_hardboiled.PNG" alt="hard boiled">
+              <img src="images/eggtimer_hardboiled.PNG" data-egg="hardboiled" alt="hard boiled">
             </button>
           </div>
           <div class="col-12 d-flex justify-content-center gap-x-9">
@@ -55,10 +55,10 @@
           </div>
           <div class="col-12 d-flex justify-content-center gap-x-6">
             <button id="softboiledBtn" class="menuButton">
-              <img src="images/eggtimer_softboiled.PNG" alt="soft boiled">
+              <img src="images/eggtimer_softboiled.PNG" data-egg="softboiled" alt="soft boiled">
             </button>
             <button id="scrambledBtn" class="menuButton">
-              <img src="images/eggtimer_scrambled.PNG" alt="scrambled">
+              <img src="images/eggtimer_scrambled.PNG" data-egg="scrambled" alt="scrambled">
             </button>
           </div>
           <div class="col-12 d-flex justify-content-center gap-x-9">
@@ -87,7 +87,7 @@
           <h1 id="timerTitle">Cooking...</h1>
         </div>
         <div class="col-12 d-flex justify-content-center mb-0">
-          <img id="chickAnimation" src="images/eggtimer_egg2.PNG" alt="chick">
+          <img id="chickAnimation" src="gif/eggtimer_animation.gif" alt="chick timer">
         </div>
         <div class="col-12 d-flex justify-content-center mt-0">
           <h2 id="timer">0:00</h2>
@@ -98,8 +98,11 @@
         <div class="col-12 text-center">
           <h1 id="endTitle">Eggs Done!</h1>
         </div>
-        <div class="col-12 text-center">
-          <img id="eggImgEnd" src="images/eggtimer_hardboiled.PNG" alt="egg image">
+        <div class="col-12 d-flex justify-content-center">
+          <img id="sunnyside" src="images/eggtimer_sunnyside.PNG" class="endImg" alt="egg image">
+          <img id="hardboiled" src="images/eggtimer_hardboiled.PNG" class="endImg" alt="egg image">
+          <img id="softboiled" src="images/eggtimer_softboiled.PNG" class="endImg" alt="egg image">
+          <img id="scrambled" src="images/eggtimer_scrambled.PNG" class="endImg" alt="egg image">
         </div>
         <div class="col-12 d-flex justify-content-center mt-4">
           <button id="endBtn" class="button mt-2">
