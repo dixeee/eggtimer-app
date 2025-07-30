@@ -56,7 +56,7 @@ npm run make
 
 ## 🪪 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/dixeee/eggtimer-app/blob/main/LICENSE).
 
 ---
 
