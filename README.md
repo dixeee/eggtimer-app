@@ -47,9 +47,6 @@ cd eggtimer-app
 # Install dependencies and start the app
 npm install
 npm start
-
-# Optional: Try app as packaged and distributable
-npm run make
 ```
 
 ---
