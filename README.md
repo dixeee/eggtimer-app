@@ -2,7 +2,7 @@
 
 Simple cozy app that I developed out of boredom, as my first personal project. It's a cute little desktop app that times four different types of eggs for you to choose from when cooking!
 
-I thought of creating this after a friend of mine wished they could just time any type of egg with just one click, without sehaving to search the internet. It was also inspired by nashalley on YouTube and Instagram.
+I thought of creating this after a friend of mine wished they could just time any type of egg with just one click, without having to search the internet. It was also inspired by nashalley on YouTube and Instagram. I hand drew all visuals on this app from the background to the buttons in pixel-art style.
 
 ![screenshot](assets/eggtimer_screenshot.png)
 
@@ -24,6 +24,8 @@ I thought of creating this after a friend of mine wished they could just time an
 | JavaScript | Visual Studio Code |
 | CSS | Git |
 | Bootstrap | GitHub |
+
+🎨 Visuals drawn using Procreate
 
 ---
 
